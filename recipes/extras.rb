@@ -164,6 +164,24 @@ if prefs[:github]
   end
 end
 
+## MARKDOWN README
+if config['markdown_readme']
+  prefs[:markdown_readme] = true
+end
+if prefs[:markdown_readme]
+  after_everything do
+    say_wizard "converting Readme.textile to Readme.md"
+    `pandoc Readme.textile -o Readme.md`
+    # GIT
+    if prefer :git, true
+      git :add => '-A'
+      git :remove => 'README'
+      git :remove => 'README.textile'
+      git :commit => '-qm "rails_apps_composer: converted readme to markdown"'
+    end
+  end
+end
+
 __END__
 
 name: extras
@@ -190,3 +208,6 @@ config:
   - better_errors:
       type: boolean
       prompt: Improve error reporting with 'better_errors' during development?
+  - markdown_readme:
+      type: boolean
+      prompt: Do you want a markdown-formatted readme instead of textile? (requires pandoc to be installed)
