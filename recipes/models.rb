@@ -95,7 +95,7 @@ RUBY
   end
   ### GIT ###
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: models"' if prefer :git, true
+  git :commit => '-qm "Models set up."' if prefer :git, true
 end # after_bundler
 
 __END__

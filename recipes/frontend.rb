@@ -28,7 +28,7 @@ after_bundler do
 
   ### GIT ###
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: front-end framework"' if prefer :git, true
+  git :commit => "-qm 'Front-end framework set up using #{prefs[:frontend]}.'" if prefer :git, true
 end # after_bundler
 
 after_everything do
@@ -47,7 +47,7 @@ after_everything do
 
   ### GIT ###
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: navigation links"' if prefer :git, true
+  git :commit => '-qm "Navigation links set up."' if prefer :git, true
 end # after_everything
 
 __END__

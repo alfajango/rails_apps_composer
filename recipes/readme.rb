@@ -77,7 +77,7 @@ after_everything do
   append_file "README.textile", "\nh2. Admin\n\n Admin: RailsAdmin" if prefer :admin, 'rails_admin'
 
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: add README files"' if prefer :git, true
+  git :commit => '-qm "Generated README files."' if prefer :git, true
 
 end # after_everything
 

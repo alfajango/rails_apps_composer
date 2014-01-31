@@ -34,7 +34,7 @@ if prefer :apps4, 'learn-rails'
     gsub_file 'config/routes.rb', /\n^\s*\n/, "\n"
     # GIT
     git :add => '-A' if prefer :git, true
-    git :commit => '-qm "rails_apps_composer: clean up starter app"' if prefer :git, true
+    git :commit => '-qm "Clean up starter app Gemfile and routes."' if prefer :git, true
 
     # >-------------------------------[ Models ]--------------------------------<
 
@@ -78,7 +78,7 @@ if prefer :apps4, 'learn-rails'
 
     ### GIT ###
     git :add => '-A' if prefer :git, true
-    git :commit => '-qm "rails_apps_composer: learn-rails app"' if prefer :git, true
+    git :commit => '-qm "Learn-rails starter app set up."' if prefer :git, true
   end # after_bundler
 end # learn-rails
 
@@ -108,7 +108,7 @@ if (prefer :apps4, 'rails-bootstrap') || (prefer :apps4, 'rails-foundation')
     gsub_file 'config/routes.rb', /\n^\s*\n/, "\n"
     # GIT
     git :add => '-A' if prefer :git, true
-    git :commit => '-qm "rails_apps_composer: clean up starter app"' if prefer :git, true
+    git :commit => '-qm "Clean up starter app Gemfile and routes."' if prefer :git, true
 
     # >-------------------------------[ Models ]--------------------------------<
 
@@ -143,8 +143,8 @@ if (prefer :apps4, 'rails-bootstrap') || (prefer :apps4, 'rails-foundation')
     ### GIT ###
     if prefer :git, true
       git :add => '-A'
-      git :commit => '-qm "rails_apps_composer: rails-bootstrap app"' if prefer :apps4, 'rails-bootstrap'
-      git :commit => '-qm "rails_apps_composer: rails-foundation app"' if prefer :apps4, 'rails-foundation'
+      git :commit => '-qm "Rails-bootstrap app set up."' if prefer :apps4, 'rails-bootstrap'
+      git :commit => '-qm "Rails-foundation app set up."' if prefer :apps4, 'rails-foundation'
     end
   end # after_bundler
 end # rails-bootstrap
@@ -201,11 +201,11 @@ if prefer :apps4, 'rails-devise'
     gsub_file 'config/routes.rb', /\n^\s*\n/, "\n"
     # GIT
     git :add => '-A' if prefer :git, true
-    git :commit => '-qm "rails_apps_composer: clean up starter app"' if prefer :git, true
+    git :commit => '-qm "Clean up starter app Gemfile and routes."' if prefer :git, true
 
     ### GIT ###
     git :add => '-A' if prefer :git, true
-    git :commit => '-qm "rails_apps_composer: learn-rails app"' if prefer :git, true
+    git :commit => '-qm "Learn-rails app set up."' if prefer :git, true
 
   end # after_bundler
 end # rails-devise

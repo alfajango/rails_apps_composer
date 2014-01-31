@@ -168,7 +168,7 @@ end
 
 ## Git
 git :add => '-A' if prefer :git, true
-git :commit => '-qm "rails_apps_composer: Gemfile"' if prefer :git, true
+git :commit => '-qm "Gemfile created."' if prefer :git, true
 
 ### CREATE DATABASE ###
 after_bundler do
@@ -228,7 +228,7 @@ after_bundler do
     run 'bundle exec rake db:create' if prefer :orm, 'mongoid'
     ## Git
     git :add => '-A' if prefer :git, true
-    git :commit => '-qm "rails_apps_composer: create database"' if prefer :git, true
+    git :commit => '-qm "Configured and created database."' if prefer :git, true
   end
 end # after_bundler
 
@@ -250,6 +250,9 @@ after_bundler do
         say_wizard "recipe installing simple_form"
         generate 'simple_form:install'
     end
+    ## Git
+    git :add => '-A' if prefer :git, true
+    git :commit => '-qm "SimpleForm generator run."' if prefer :git, true
   end
   ## Figaro Gem
   if prefer :local_env_file, 'figaro'
@@ -291,7 +294,7 @@ FILE
   end
   ## Git
   git :add => '-A' if prefer :git, true
-  git :commit => '-qm "rails_apps_composer: generators"' if prefer :git, true
+  git :commit => '-qm "Local env file set up."' if prefer :git, true
 end # after_bundler
 
 __END__

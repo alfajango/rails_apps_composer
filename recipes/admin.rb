@@ -28,7 +28,7 @@ after_bundler do
   end
   ### GIT
   git :add => '-A' if prefer :git, true
-  git :commit => %Q(-qm "rails_apps_composer: installed #{prefs[:admin]}") if prefer :git, true
+  git :commit => %Q(-qm "Installed #{prefs[:admin]} for admin dashboard") if prefer :git, true
 end
 
 __END__
